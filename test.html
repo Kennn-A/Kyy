@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Store</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            padding: 5px 10px;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c00;
+        }
+
+        .utility {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .utility img {
+            width: 20px;
+            height: 15px;
+        }
+
+        .utility select, .utility button {
+            border: none;
+            background: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .utility button {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .utility button:hover {
+            border-color: #ff8c00;
+        }
+
+        .section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .section h2 {
+            background: #ff8c00;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid #ffa500;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-size: 1.8rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .product {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product h4 {
+            margin: 15px 0 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #777;
+        }
+        .product button {
+            padding: 10px 15px;
+            background: #ff8c00;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .product button:hover {
+            background: #ffa500;
+        }
+        footer {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        footer .social-icons a {
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff8c00;
+        }
+
+        footer .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        footer .payment-icons img {
+            width: 40px;
+        }
+
+        footer .footer-links {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer .footer-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .footer-links a:hover {
+            color: #ff8c00;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-links">
+            <a href="#">Shop</a>
+            <a href="#">Collections</a>
+            <a href="#">Brand</a>
+        </div>
+        <div class="utility">
+            <span>Philippines | PHP</span>
+            <button>Search</button>
+            <button>Account</button>
+            <button>Cart</button>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/1920px-Flag_of_the_Philippines.svg.png?20240817131847" alt="Philippines flag">
+        </div>
+    </header>
+    <center>
+    <h3>Products</h3>
+    </center>
+    <section class="section" id="products">
+        <h2>UA Premium Plains</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/TRENCH_RED_c321f1e9-f3e2-4c40-8576-0e2a480b1b79.png?v=1721213595&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Trench Red</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/SKY_WHITE2.png?v=1723270819&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Sky White</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/ROYAL_BLUE.png?v=1721213451&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Royal Blue</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/MOSS_GREEN.png?v=1721213378&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Moss Green</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/MUSTARD_YELLOW.png?v=1721213418&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Mustard Yellow</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/RUSTY_ORANG.png?v=1721213484&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Rusty Orange</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/MOCHA_e7391c1d-85cc-4d6f-8075-75e56fc210f9.png?v=1723270856&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Mocha</h5>
+                <p>₱799.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/DARK_MUSTARD.png?v=1723271074&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Dark Mustard</h5>
+                <p>₱699.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/KHAKI.png?v=1723271058&width=990" alt="T-shirt">
+                <h5>UA Premium Plains - Khaki</h5>
+                <p>₱699.00 PHP</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://uaworldwide.com/cdn/shop/files/TOP_DYE.png?v=1723271021&width=990" alt="T-shirt">
+                <h5>UA Premium Plains -
+                    Top Dye</h5>
+                    <p>699.00 PHP</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://uaworldwide.com/cdn/shop/files/MAROON.png?v=1721213116&width=990" alt="T-shirt">
+                    <h5>UA Premium Plains - Maroon</h5>
+                    <p>₱799.00 PHP</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://uaworldwide.com/cdn/shop/files/LIGHT_GREY.png?v=1723270834&width=990" alt="T-shirt">
+                    <h5>UA Premium Plains - Light Grey</h5>
+                    <p>₱799.00 PHP</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="https://uaworldwide.com/cdn/shop/files/FATIGUE.png?v=1721212943&width=990" alt="T-shirt">
+                    <h5>UA Premium Plains - Fatigue</h5>
+                    <p>₱799.00 PHP</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/UndergroundapparelUbec">&#xf09a;</a>
+                <a href="#">&#xf16d;</a> <!-- Instagram Icon -->
+                <a href="#">&#xf16a;</a> <!-- TikTok Icon -->
+            </div>
+            <div class="payment-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/GCash_logo.svg" alt="GCash">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Maya_logo.svg" alt="Maya">
+                <img src="https://logowik.com/content/uploads/images/531_grab.jpg" alt="Grab">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard">
+            </div>
+            <div class="footer-links">
+                <a href="#">Contact Information</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <p>&copy; 2024, UA Worldwide</p>
+        </footer>
+    </body>
+    </html>
+    

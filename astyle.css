@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)),url(about.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.aboutus {
+    z-index: 2; 
+    color: #fff; 
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    margin-top: 150px; 
+    transition: 0.5s;
+}
+.aboutus:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+nav .logo {
+    width: 300px;
+    height: auto;
+}
+nav ul {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+nav ul li {
+    list-style: none;
+    margin-left: 40px;
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 4px; 
+    width: 100%;
+    background-color: #FFD700;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+nav ul li a:hover {
+    color: #FFD700;
+}
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+.images {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0; 
+}
+.image {
+    text-align: center;
+    margin: 0 50px; 
+}
+
+.images img {
+    width: 300px;
+    height: 300px;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1); 
+    opacity: 1; 
+}
+
+.image p {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.text {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(26, 25, 25, 0.5); /* Semi-transparent black background */
+    color: #95B9C7;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    font-family: serif;
+    box-shadow: 0px 4px 6px rgba(245, 243, 243, 0.3); /* Optional: adds a subtle shadow */
+}
+
+
+.text p {
+    font-size: 18px;
+    color: #95B9C7;
+    margin-top: 20px;
+    line-height: 1.6;
+    background-color: transparent;
+    font-family: serif;
+}
